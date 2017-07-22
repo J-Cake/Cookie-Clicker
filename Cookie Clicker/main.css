@@ -1,0 +1,276 @@
+      body {
+          background: #eee;
+          overflow: hidden;
+      }
+      * {
+        user-select: none;
+        padding: 0;
+        margin: 0;
+      }
+      button {
+          background: cornflowerblue;
+          outline: none;
+      }
+      button:active {
+          background: dodgerblue;
+      }
+      #toolbar {
+          display: block;
+          position: fixed;
+          width: 100%;
+          height: 10em;
+          background: #333;
+          bottom: 0%;
+          color: #eee;
+          z-index: 1000;
+      }
+      #farms {
+          width: 75%;
+          height: 100%;
+          box-sizing: border-box;
+          vertical-align: middle;
+      }
+      .farm {
+          display: inline-block;
+          width: calc(19.55% - 5%);
+          background: orange;
+          text-align: center;
+          margin: 0px;
+          padding: 0px;
+          height: 100%;
+          box-sizing: border-box;
+          vertical-align: middle;
+          font-size: 1.25em;
+          padding-top: 2em;
+          overflow: hidden;
+          word-wrap: break-word;
+      }
+      .Vfarm {
+          width: 3em;
+          height: 3em;
+          background: orange;
+          position: relative;
+      }
+      #addButton {
+          position: fixed;
+          width: 50%;
+          left: 25%;
+          font-size: 3em;
+          border: none;
+          border-radius: 10000px;
+          bottom: 4em;
+          color: #eee;
+          outline: none;
+      }
+      #addButoon:active {
+          outline: none;
+      }
+      #addButoon:visited {
+          outline: none;
+      }
+      #indicator {
+          display: block;
+          width: 50%;
+          font-size: 5em;
+          text-align: center;
+          padding-top: 10%;
+          color: #333;
+      }/*
+      
+      @keyframes moveDown {
+        from {top: -50%;}
+        to {top: 150%;}
+      }
+      
+      
+      svg {
+          animation: moveDown 2s ease;
+          position: absolute;
+          left: 50%;
+          z-index: 500;
+      }*/
+      .svg {
+          position: relative;
+          left: 3%;
+          transform: scale(0.5, 0.5);
+      }
+      #farmContainer {
+          display: inline-block;
+          position: fixed;
+          width: 50%;
+          height: 25%;
+          left: 50%;
+          overflow: auto;
+          top: 25%;
+          background: #333;
+      }
+      #farmContainer em {
+          display: inline-block;
+          width: 10%;
+          position: relative;
+          height: 3em;
+          text-align: center;
+          background: orange;
+          color: #eee;
+          margin: 2px 2px 2px 2px;
+      }
+      #reset {
+          display: inline-block;
+          width: 5em;
+          height: 5em;
+          position: absolute;
+          border-radius: 10000px;
+          border: none;
+          padding: 1em;
+          z-index: 1001;
+          left: 60%;
+          top: calc(50% - 2.5em);
+          outline: none;
+      }
+      #reset img {
+          width: 3em;
+          height: 3em;
+      }
+      #toolbar #reset {
+          display: inline-block;
+      }
+      #settings {
+          position: absolute;
+          left: 75%;
+          top: calc(50% - 2.5em);
+          border-radius: 1000px;
+          border: none;
+          padding: 1em;
+          width: 5em;
+          height: 5em;
+      }
+      #settings img {
+          width: 3em;
+          height: 3em;
+      }
+      #papb {
+          position: absolute;
+          display: inline-block;
+          left: 90%;
+          top:calc(50% - 2.5em);
+          width: 5em;
+          height: 5em;
+          padding: 1em;
+          border: none;
+          border-radius: 10000px;
+          outline: none;
+      }
+      #papb img {
+          width: 3em;
+          height: 3em;
+      }
+      #alertBox {
+          position: fixed;
+          width: 50%;
+          height: 25%;
+          left: 25%;
+          top: 38.5%;
+          background: #555;
+          text-align: center;
+          display: none;
+          z-index: 10000000;
+      }
+      #alertBox p {
+          display: inline-block;
+          height: 50%;
+          width: 100%;
+          font-family: "Ubuntu";
+      }
+      #alertBox #head {
+          font-size: 2em;
+          font-weight: bold;
+          -webkit-text-stroke: 1px orange;
+          -moz-text-stroke: 1px orange;
+          -ms-text-stroke: 1px orange;
+          -o-text-stroke: 1px orange;
+          text-shadow: 2px 2px #333;
+      }
+      #removeFarm {
+          display: inline-block;
+          position: absolute;
+          width: 5em;
+          height: 5em;
+          padding: 1em;
+          border-radius: 10000px;
+          border: none;
+          top: calc(50% - 2.5em);
+          left: calc(100% - 7.5em);
+      }
+      #removeFarm img {
+          width: 3em;
+          height: 3em;
+      }
+      input {
+          background: #eee;
+          border: 2px solid #333;
+          border-radius: 1000px;
+          padding-left: 1em;
+          outline: none;
+      }
+      
+      #promptBox {
+          position: fixed;
+          width: 50%;
+          height: 25%;
+          left: 25%;
+          top: 38.5%;
+          background: #555;
+          text-align: center;
+          display: none;
+          z-index: 10000000;
+      }
+      #promptBox p {
+          display: inline-block;
+          height: 50%;
+          width: 100%;
+          font-family: "Ubuntu";
+      }
+      #promptBox input {
+          border-color: orange;
+          width: 80%;
+          color: #333;
+      }
+      #promptBox #header {
+          font-size: 2em;
+          font-weight: bold;
+          -webkit-text-stroke: 1px orange;
+          -moz-text-stroke: 1px orange;
+          -ms-text-stroke: 1px orange;
+          -o-text-stroke: 1px orange;
+          text-shadow: 2px 2px #333;
+      }
+      #promptBox input[type="submit"] {
+          width: 50%;
+          color: #eee;
+          background: #333;
+          border: 2px solid orange;
+          font-size: 2em;
+          position: relative;
+          top: 10%;
+      }
+      
+#farmContainer::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #333;
+}
+
+#farmContainer::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #333;
+}
+
+#farmContainer::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: orange;
+}
+      
