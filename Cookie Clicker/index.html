@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <script>//Initiation
+      var score = 0;
+    </script>
+    
+    <script src="farm.js"></script>
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="settings.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+  </head>
+  <body>
+    <span id="indicator">0 <svg class="svg" width="100" height="100"><ellipse rx=50 ry=50 cx=50 cy=50 fill="#CD853F"/><ellipse rx=5 ry=5 cx=25 cy=25 fill="#8B4513"/><ellipse rx=5 ry=5 cx=52 cy=72 fill="#8B4513"/><ellipse rx=5 ry=5 cx=53 cy=40 fill="#8B4513"/><ellipse rx=5 ry=5 cx=35 cy=57 fill="#8B4513"/><ellipse rx=5 ry=5 cx=68 cy=56 fill="#8B4513"/><ellipse rx=5 ry=5 cx=69 cy=21 fill="#8B4513"/><ellipse rx=5 ry=5 cx=25 cy=75 fill="#8B4513"/><ellipse rx=5 ry=5 cx=52 cy=72 fill="#8B4513"/></svg></span>
+    <button onclick="addCookie(1)" id="addButton">+</button>
+    <span id="pauseIndicator"></span>
+    <div id="farmContainer">
+        
+    </div>
+    
+    <div id="toolbar">
+        <div id="farms">
+            <span onclick="addFarm(5)" class="farm"><em><strong>Tier 1</strong></em>:<br>1000 cookies</span>
+            <span onclick="addFarm(4)" class="farm"><em><strong>Tier 2</strong></em>:<br>2000 cookies</span>
+            <span onclick="addFarm(3)" class="farm"><em><strong>Tier 3</strong></em>:<br>3000 cookies</span>
+            <span onclick="addFarm(2)" class="farm"><em><strong>Tier 4</strong></em>:<br>4000 cookies</span>
+            <span onclick="addFarm(1)" class="farm"><em><strong>Tier 5</strong></em>:<br>5000 cookies</span>
+        </div>
+            
+        <button onclick="reset()" id="reset"><img src="res/reset.png"></button>
+        <button onclick="settings()" id="settings"><img src="res/settings-icon.png"></button>
+        <button onclick="togglePauseAndPlay()" id="papb" value="play"><img src="res/pause.png"></button>
+    </div>
+    
+    <div id="settingsWindow">
+        <button id="closeSettings" onclick="closeSettings()"><img src="res/close.png"></button><h1>Nerdy Stuff</h1>
+        
+        <div id="gameControl"><label>Flow Control<hr></label><br><br>
+            <button onclick="doUpdateCycle()">Update Game By 1 Tick</button>
+            <button onclick="updateFarmContainer()">Update Farms display</button><br>
+        </div><br><br><br><br><br><br><br><br><br><br><br>
+        <!--<div id="cheat"><label>Game Cheats<hr></label><br><br>
+            <input id="addCookies" type="number"><input id="addFarm" type="number" min="1" max="5"><br>
+            <label class="label">Cookies</label><label>Farms:</label><label class="label">Tier</label><br>
+            <button onclick="add()">add</button>
+        </div>-->
+        
+    </div>
+    
+    <div id="alertBox" onclick="document.querySelector('#alertBox').style.display = 'none';">
+        <p id="head"></p>
+        <p id="body"></p>
+    </div>
+    
+    <script src="settings.js"></script>
+  </body>
+</html>
